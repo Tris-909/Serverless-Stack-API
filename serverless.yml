@@ -53,6 +53,12 @@ functions:
       - http:
           path: notes/{id}
           method: update
+  delete:
+    handler: delete.main
+    events:
+      - http: 
+          path: noets/{id}
+          method: delete
   hello:
     handler: handler.hello
     events:
