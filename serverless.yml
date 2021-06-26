@@ -15,7 +15,7 @@ provider:
   stage: prod
   region: ap-southeast-2
   environment: 
-    tableName: serverless-notes
+    TableName: serverless-notes
   iamRoleStatements:
     - Effect: Allow
       Action: 
@@ -52,16 +52,10 @@ functions:
     events: 
       - http:
           path: notes/{id}
-          method: update
+          method: put
   delete:
     handler: delete.main
     events:
       - http: 
           path: noets/{id}
           method: delete
-  hello:
-    handler: handler.hello
-    events:
-      - http:
-          path: hello
-          method: get
