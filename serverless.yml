@@ -70,6 +70,14 @@ functions:
           method: delete
           cors: true
           authorizer: aws_iam
+  drag:
+    handler: drag.main
+    events:
+      - http:
+          path: notes/drag/{id}
+          method: put 
+          cors: true
+          authorizer: aws_iam
   billing: 
     handler: billing.main
     events:
