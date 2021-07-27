@@ -10,6 +10,7 @@ export const main = handler(async (event, context) => {
         Item: {
             userId: event.requestContext.identity.cognitoIdentityId,
             noteId: uuid.v1(),
+            header: data.header,
             content: data.content,
             attachment: data.attachment,
             x: 0,
